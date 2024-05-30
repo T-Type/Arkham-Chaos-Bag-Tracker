@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arkham Horror Chaos Bag Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Arkham Horror Chaos Bag Tracker</h1>
+  <div class="player-names">
+    <input type="text" id="player1Name" placeholder="Player 1">
+    <input type="text" id="player2Name" placeholder="Player 2">
+    <input type="text" id="player3Name" placeholder="Player 3">
+    <input type="text" id="player4Name" placeholder="Player 4">
+  </div>
+  <table class="token-table">
+    <thead>
+      <tr>
+        <th>Actions</th>
+        <th>Token</th>
+        <th>Count</th>
+        <th>Draw Chance (%)</th>
+        <th>Players</th>
+      </tr>
+    </thead>
+    <tbody id="tokenTableBody">
+      <!-- Token rows will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <div class="results">
+    <h2>Player Draws Log</h2>
+    <table class="draw-log">
+      <thead>
+        <tr>
+          <th id="logPlayer1">Player 1</th>
+          <th id="logPlayer2">Player 2</th>
+          <th id="logPlayer3">Player 3</th>
+          <th id="logPlayer4">Player 4</th>
+        </tr>
+      </thead>
+      <tbody id="drawLogBody">
+        <!-- Draws will be dynamically added here -->
+      </tbody>
+    </table>
+    <!-- Add a row of buttons for removing last entry for each player -->
+    <div id="removeLastButtons">
+      <button onclick="removeLastDraw(1)">Remove Latest</button>
+      <button onclick="removeLastDraw(2)">Remove Latest</button>
+      <button onclick="removeLastDraw(3)">Remove Latest</button>
+      <button onclick="removeLastDraw(4)">Remove Latest</button>
+    </div>
+    <!-- Add "Clear All" buttons below the "Remove Last" buttons -->
+    <div id="clearAllButtons">
+      <button onclick="clearAllDraws()">Clear All</button>
+    </div>
+  </div>
+
+  <!-- Section for calculating test success chances -->
+<div class="test-section">
+  <h2>Test Success Calculator</h2>
+  <div class="test-inputs">
+    <input type="number" id="skillValue" placeholder="Skill Value">
+    <input type="number" id="testDifficulty" placeholder="Test Difficulty">
+    <button onclick="calculateSuccess()">Calculate Success</button>
+  </div>
+  <div class="test-results">
+    <p id="successChance">Success Chance: 0.00%</p>
+    <p id="eligibleTokens">Eligible Tokens to Succeed: </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

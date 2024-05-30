@@ -1,0 +1,199 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0; /* Soft gray background */
+    color: #333333; /* Dark text color */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #8B0000; /* Dark red heading color */
+  }
+  
+  .token-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .token-table th,
+  .token-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #ccffcc; /* Soft green table cell background */
+  }
+  
+  .token-table th {
+    background-color: #ffb6c1; /* Soft pink table header background */
+  }
+  
+  .token-table th,
+  .token-table td span {
+    color: #333333; /* Dark text color */
+  }
+  
+  .actions-column button {
+    margin: 0 4px;
+    padding: 4px 8px;
+    border: none;
+    background-color: #ffb6c1; /* Soft pink button background for actions */
+    color: #333333; /* Dark text color */
+    cursor: pointer;
+  }
+  
+  .players-column button {
+    margin: 0 2px;
+    padding: 4px 8px;
+    border: 1px solid #333333; /* Add border to player buttons */
+    background-color: #ccffcc; /* Soft green button background for player buttons */
+    color: #333333; /* Dark text color */
+    cursor: pointer;
+  }
+  
+  .draw-log {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .draw-log th,
+  .draw-log td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #ccffcc; /* Soft green table cell background */
+  }
+  
+  .draw-log th {
+    background-color: #ffb6c1; /* Soft pink table header background */
+  }
+  
+  .draw-log th,
+  .draw-log td {
+    color: #333333; /* Dark text color */
+  }
+  
+  #removeLastButtons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  #removeLastButtons button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border: 1px solid #8B0000; /* Dark red border */
+    background-color: #ffb6c1; /* Soft pink button background */
+    color: #8B0000; /* Dark red text color */
+    cursor: pointer;
+  }
+  
+  #clearAllButtons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  #clearAllButtons button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border: 1px solid #333333; /* Dark border */
+    background-color: #f0f0f0; /* Soft gray button background */
+    color: #333333; /* Dark text color */
+    cursor: pointer;
+  }
+  
+  /* Styles for the test section */
+  .test-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+  }
+  
+  .test-section h2 {
+    text-align: center;
+    color: #8B0000; /* Dark red heading color */
+    margin-bottom: 20px;
+  }
+  
+  .test-inputs {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .test-inputs input {
+    width: 80px;
+    padding: 8px;
+    margin: 0 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    background-color: #ccffcc; /* Soft green background for inputs */
+    color: #333333; /* Dark text color */
+  }
+  
+  .test-inputs button {
+    padding: 8px 16px;
+    border: 1px solid #8B0000; /* Dark red border */
+    background-color: #ffb6c1; /* Soft pink button background */
+    color: #8B0000; /* Dark red text color */
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .test-results {
+    text-align: center;
+  }
+  
+  .test-results p {
+    font-size: 1.2em;
+    color: #333333; /* Dark text color */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .player-names input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .token-table, .draw-log {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .token-table th, .token-table td,
+    .draw-log th, .draw-log td {
+      display: inline-block;
+      width: auto;
+    }
+  
+    .actions-column, .players-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .actions-column button, .players-column button {
+      width: 80px;
+      margin: 2px 0;
+    }
+  
+    #removeLastButtons button, #clearAllButtons button {
+      width: calc(50% - 10px);
+      margin: 5px;
+    }
+  
+    .test-inputs input {
+      width: 60px;
+      margin: 5px 0;
+    }
+  
+    .test-inputs button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
