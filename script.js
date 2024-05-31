@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Define token types
-    const tokenTypes = ['skull', 'minusOne', 'minusTwo', 'minusThree', 'minusFive', 'zero', 'cultist', 'elderSign', 'tablet', 'elderThing'];
+    const tokenTypes = ['plusOne', , 'zero', 'minusOne', 'minusTwo', 'minusThree', 'minusFive', 'skull', 'autofail', 'cultist', 'elderSign', 'tablet', 'elderThing'];
   
     // Define token counts
     const tokenCounts = {};
@@ -120,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get token value
     function getTokenValue(token) {
       const tokenValues = {
-        skull: -1, // Example values, adjust as necessary
+        plusOne: 1,
+        skull: -1,
         zero: 0,
         minusOne: -1,
         minusTwo: -2,
@@ -180,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const playersColumn = document.createElement('td');
       for (let i = 1; i <= 4; i++) {
         const playerButton = document.createElement('button');
-        playerButton.textContent = `Player ${i}`;
+        playerButton.textContent = document.getElementById(`player${i}Name`).value || `Player ${i}`;
         playerButton.onclick = () => addDraw(i, token);
         playerButton.className = `player${i}Button`;
         playersColumn.appendChild(playerButton);
