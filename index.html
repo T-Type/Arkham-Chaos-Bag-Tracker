@@ -21,6 +21,8 @@
         <th>Token</th>
         <th>Count</th>
         <th>Draw Chance (%)</th>
+        <th>Value</th>
+        <th>Adjust Value</th>
         <th>Players</th>
       </tr>
     </thead>
@@ -58,19 +60,19 @@
   </div>
 
   <!-- Section for calculating test success chances -->
-<div class="test-section">
-  <h2>Test Success Calculator</h2>
-  <div class="test-inputs">
-    <input type="number" id="skillValue" placeholder="Skill Value">
-    <input type="number" id="testDifficulty" placeholder="Test Difficulty">
-    <button onclick="calculateSuccess()">Calculate Success</button>
+  <div class="test-section">
+    <h2>Test Success Calculator</h2>
+    <div class="test-inputs">
+      <input type="number" id="skillValue" placeholder="Skill Value">
+      <input type="number" id="testDifficulty" placeholder="Test Difficulty">
+      <button onclick="calculateSuccess()">Calculate Success</button>
+    </div>
+    <div class="test-results">
+      <p id="successChance">Success Chance: 0.00%</p>
+      <p id="eligibleTokens">Eligible Tokens to Succeed: </p>
+    </div>
   </div>
-  <div class="test-results">
-    <p id="successChance">Success Chance: 0.00%</p>
-    <p id="eligibleTokens">Eligible Tokens to Succeed: </p>
-  </div>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
